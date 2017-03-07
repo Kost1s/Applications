@@ -35,11 +35,9 @@ public class TableViewTrades extends Application {
         tradePriceCol.setCellValueFactory(new PropertyValueFactory<>("tradePrice"));
         tradeQtyCol.setCellValueFactory(new PropertyValueFactory<>("tradeQty"));
 
-        // Set Sort type for userName column
         tradeNoCol.setSortType(TableColumn.SortType.DESCENDING);
         tradeTimeCol.setSortable(false);
-
-        // Display row data
+        
         ObservableList<Trade> tradesData = getTradesData();
         table.setItems(tradesData);
 
